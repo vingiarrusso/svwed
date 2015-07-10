@@ -14,6 +14,10 @@ app.debug = True
 def hello():
   return "Hello, world!"
 
+@app.route("/another-page")
+def more():
+  return "this will be another page"
+
 def run_server():
   http_server = tornado.httpserver.HTTPServer(
     tornado.wsgi.WSGIContainer(app)
@@ -30,4 +34,5 @@ def run_server():
     pass
 
 if __name__ == "__main__":
+  print "server started"
   run_server()
