@@ -1,2 +1,2 @@
 flask
-tornado
+tornado==2.4
